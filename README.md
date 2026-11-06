@@ -36,7 +36,7 @@
 
 | Меню | Кабина |
 |---|---|
-| ![Меню](docs/media/nereid-menu.png) | ![Кабина](docs/media/nereid-camera.png) |
+| ![Меню](docs/media/nereid-menu.png) | ![Кабина](docs/media/nereid-gameplay.png) |
 
 | Блокнот смены | Доска фото |
 |---|---|
@@ -44,7 +44,7 @@
 
 | Пульт и иллюминатор | Финал |
 |---|---|
-| ![Пульт](docs/media/nereid-gameplay.png) | ![Финал](docs/media/nereid-ending.png) |
+| ![Пульт](docs/media/nereid-camera.png) | ![Финал](docs/media/nereid-ending.png) |
 
 ---
 
