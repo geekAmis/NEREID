@@ -1,0 +1,12 @@
+{
+  "anomalies": [
+    {"id": "bell", "name": "Колокольня", "position": [4.0, -8.0, -24.0], "range": 9.0, "text": "Колокол. 47 Гц. На снимке — целый.", "target": true},
+    {"id": "dome", "name": "Купол", "position": [0.0, -14.0, -18.0], "range": 10.0, "text": "Купол института. Окна горят?", "target": true},
+    {"id": "window", "name": "Окно", "position": [-6.0, -7.0, -16.0], "range": 7.0, "text": "Окно. В иллюминаторе окна нет.", "target": true},
+    {"id": "figure", "name": "Силуэт", "position": [7.0, -5.0, -12.0], "range": 6.0, "text": "Силуэт у колокольни. Стоит.", "target": true},
+    {"id": "cables", "name": "Кабели", "position": [-3.0, -4.0, -9.0], "range": 5.0, "text": "Кабели уходят вниз. Кто-то их режет.", "target": false},
+    {"id": "door", "name": "Дверь", "position": [2.0, -9.0, -14.0], "range": 6.0, "text": "Дверь института открыта внутрь.", "target": true},
+    {"id": "hand", "name": "Рука", "position": [5.5, -6.0, -10.0], "range": 4.0, "text": "Ладонь на стекле. С той стороны.", "target": true},
+    {"id": "choir", "name": "Хор", "position": [0.0, -11.0, -22.0], "range": 12.0, "text": "Много лиц. Одно лицо. Твоё.", "target": true}
+  ]
+}

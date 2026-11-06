@@ -1,0 +1,32 @@
+{
+  "lines": [
+    {"id": "brief_01", "voice": "brief_01", "text": "Нереида, это база. Слышимость два. Как у тебя? Приём.", "speaker": "Вера"},
+    {"id": "brief_02", "voice": "brief_02", "text": "Смена начинается. Сорок два метра. Норма. Для человека — ненорма, но для нас — норма.", "speaker": "Вера"},
+    {"id": "tut_01", "voice": "tut_01", "text": "Левый щиток. Тумблер с белой полосой. Жизнеобеспечение. Не перепутай.", "speaker": "Вера"},
+    {"id": "tut_02", "voice": "tut_02", "text": "Гидрофон на пульте. Усиление до упора, потом на два щелчка назад.", "speaker": "Вера"},
+    {"id": "tut_03", "voice": "tut_03", "text": "Лебёдка справа. Крути медленно. Трос не любит спешки.", "speaker": "Вера"},
+    {"id": "tut_04", "voice": "tut_04", "text": "Если увидишь воду на полу — помпа слева, у баллонов. И не включай свет в воду.", "speaker": "Вера"},
+    {"id": "signal_pump", "voice": "signal_pump", "text": "Это насос. Скучно, но норма. Запиши.", "speaker": "Вера"},
+    {"id": "signal_groan", "voice": "signal_groan", "text": "Структурный стон. Дом устал. Запиши.", "speaker": "Вера"},
+    {"id": "signal_bell", "voice": "signal_bell", "text": "Это техногенный шум. Запиши как техногенный. Понял?", "speaker": "Вера"},
+    {"id": "signal_knock", "voice": "signal_knock", "text": "Шаги по металлу. Возможно, течение. Возможно.", "speaker": "Вера"},
+    {"id": "warn_co2", "voice": "warn_co2", "text": "CO два, три и одна. Патрон. Сейчас.", "speaker": "Вера"},
+    {"id": "warn_water", "voice": "warn_water", "text": "Не включай свет в воду. Я серьёзно.", "speaker": "Вера"},
+    {"id": "warn_cable", "voice": "warn_cable", "text": "Трос поёт. Страви лебёдку. Живо.", "speaker": "Вера"},
+    {"id": "warn_noise", "voice": "warn_noise", "text": "Ты слишком шумишь. Оно слышит.", "speaker": "Вера"},
+    {"id": "power_cut", "voice": "power_cut", "text": "Кабель перебит. Держись. Я проверю генератор.", "speaker": "Вера"},
+    {"id": "return_01", "voice": "return_01", "text": "Я здесь. Ты слышишь? Ответь.", "speaker": "Вера"},
+    {"id": "return_02", "voice": "return_02", "text": "Я слышу колокол. Я тоже слышу.", "speaker": "Вера"},
+    {"id": "photo_01", "voice": "photo_01", "text": "На снимке что-то есть. Посмотри на доску.", "speaker": "Вера"},
+    {"id": "bell_01", "voice": "bell_01", "text": "Это не колокол. Это хор.", "speaker": "Вера"},
+    {"id": "bell_02", "voice": "bell_02", "text": "Не отвечай. Пожалуйста.", "speaker": "Вера"},
+    {"id": "end_surface", "voice": "end_surface", "text": "Смена окончена. Всплывай. Я всё подпишу.", "speaker": "Вера"},
+    {"id": "end_answer", "voice": "end_answer", "text": "Ты не всплыл. Я знала.", "speaker": "Вера"},
+    {"id": "end_keep", "voice": "end_keep", "text": "Ты остался. Хорошо. Я буду слушать.", "speaker": "Вера"},
+    {"id": "silence_01", "voice": "silence_01", "text": "Нереида?", "speaker": "Вера"},
+    {"id": "silence_02", "voice": "silence_02", "text": "Не молчи. Пожалуйста.", "speaker": "Вера"},
+    {"id": "silence_03", "voice": "silence_03", "text": "Я подожду. Я умею.", "speaker": "Вера"},
+    {"id": "misc_signal", "voice": "misc_signal", "text": "Запиши. Потом разберёмся.", "speaker": "Вера"},
+    {"id": "intro_warn", "voice": "intro_warn", "text": "Если что-то попросит ответить — не отвечай.", "speaker": "Вера"}
+  ]
+}
