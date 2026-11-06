@@ -19,6 +19,22 @@
 | OPEN | 7 |
 | WONTFIX | 0 |
 
+### GitHub Issues
+
+| GitHub | Локальный | Статус |
+|---|---|---|
+| [#1](https://github.com/geekAmis/NEREID/issues/1) | NER-115 · k-NN | OPEN |
+| [#2](https://github.com/geekAmis/NEREID/issues/2) | NER-120 · бобины | OPEN |
+| [#3](https://github.com/geekAmis/NEREID/issues/3) | NER-113 · финалы | OPEN |
+| [#4](https://github.com/geekAmis/NEREID/issues/4) | NER-122 · EN | OPEN |
+| [#5](https://github.com/geekAmis/NEREID/issues/5) | NER-114 · perf | OPEN |
+| [#6](https://github.com/geekAmis/NEREID/issues/6) | NER-121 · геймпад | OPEN |
+| [#7](https://github.com/geekAmis/NEREID/issues/7) | NER-123 · актриса | OPEN |
+| [#8](https://github.com/geekAmis/NEREID/issues/8) | NER-124 · Ollama | OPEN |
+| [#9](https://github.com/geekAmis/NEREID/issues/9) | NER-119 · Steam | OPEN |
+| [#10](https://github.com/geekAmis/NEREID/issues/10) | NER-008 · товарный знак | OPEN |
+| [#11](https://github.com/geekAmis/NEREID/issues/11) | Release v0.1.0 | DONE |
+
 ---
 
 ## NER-101 · feature · P0 · DONE
