@@ -219,7 +219,7 @@ flowchart TD
 ├─ tools/                   # voice generation, bus layout, trailer assembly
 ├─ docs/media/              # скриншоты и трейлер для README
 ├─ .docs/                   # PLAN, AI_IN_GAME, PLANNING_ROOM, 7 рецензий, issues
-├─ .github/workflows/       # CI: headless tests
+├─ .docs/ci/tests.yml       # готовый GitHub Actions workflow
 └─ README.md
 ```
 
