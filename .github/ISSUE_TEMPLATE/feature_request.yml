@@ -1,0 +1,41 @@
+name: Feature request
+description: Идея для следующей смены
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую проблему решает
+      description: Опишите игровую ситуацию, а не только решение.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Предложение
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Критерии приёмки
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Область
+      options:
+        - sim
+        - cabin
+        - audio
+        - ai
+        - narrative
+        - ui
+        - fx
+        - perf
+        - docs

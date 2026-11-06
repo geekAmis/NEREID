@@ -391,6 +391,8 @@ godot --headless --path game --script res://tools/build_buses.gd
 
 Код — **MIT** (см. [`LICENSE`](LICENSE)). Текстуры — **CC0** (ambientCG), шрифты — **OFL** (PT Sans, JetBrains Mono, Caveat). Полный список — в [`THIRD_PARTY.md`](THIRD_PARTY.md).
 
+Участие, ветки и правила ассетов — в [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
 Сделано на **Godot 4.7.2**. Вдохновлено *Iron Lung*, *Split*, *Horror Vacui* и *ROUTINE*.
 
 > **Слушай. Не шуми. Не отвечай.**

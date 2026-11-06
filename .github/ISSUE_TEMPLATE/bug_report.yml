@@ -1,0 +1,50 @@
+name: Bug report
+description: Что-то сломалось в кабине
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за отчёт. Приложите лог из `%APPDATA%\Godot\app_userdata\NEREID\logs\` и, если возможно, скриншот.
+  - type: textarea
+    id: what
+    attributes:
+      label: Что произошло
+      description: Ожидаемое и фактическое поведение.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения
+      placeholder: |
+        1. Начать смену
+        2. ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Версия
+      placeholder: v0.1.0 / commit
+    validations:
+      required: true
+  - type: dropdown
+    id: quality
+    attributes:
+      label: Качество графики
+      options:
+        - Низкое
+        - Среднее
+        - Высокое
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Железо и ОС
+      placeholder: GPU, CPU, RAM, Windows/Linux
+  - type: textarea
+    id: log
+    attributes:
+      label: Лог
+      render: shell
