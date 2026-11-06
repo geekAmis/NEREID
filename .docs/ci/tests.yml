@@ -1,0 +1,36 @@
+# CI recipe — NEREID headless core tests.
+#
+# The release token used to publish this repository did not have the GitHub
+# `workflow` scope, so this file lives in docs instead of .github/workflows/.
+# To enable CI, copy it to .github/workflows/tests.yml and push with a token
+# that has the `workflow` scope.
+
+name: tests
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+  workflow_dispatch:
+
+jobs:
+  headless-core:
+    name: Godot 4.7.2 · headless core tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Godot
+        uses: chickensoft-games/setup-godot@v2
+        with:
+          version: 4.7.2
+          include-templates: false
+
+      - name: Import project
+        run: godot --headless --path game --import
+
+      - name: Run 101 core checks
+        run: godot --headless --path game --script res://tests/run_tests.gd
