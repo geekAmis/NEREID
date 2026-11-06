@@ -42,7 +42,7 @@
 - 7 аудиошин: Master, SFX, UI, Hydrophone, Radio, Voice, Underwater.
 - 101 headless-проверка, включая 20-минутный прогон с автопилотом.
 - Windows-билд `NEREID.exe` с встроенным PCK.
-- GitHub Actions workflow для headless-тестов.
+- CI-рецепт headless-тестов в `.docs/ci/tests.yml` (для включения нужен `workflow` scope).
 - Трейлер 19 с (GIF/WebP/MP4) и 6 скриншотов в `docs/media/`.
 
 ### Fixed

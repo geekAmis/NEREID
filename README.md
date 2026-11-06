@@ -352,7 +352,7 @@ godot --headless --path game --script res://tools/build_buses.gd
 
 ### M10. Релиз — готово для GitHub
 - [x] Windows-билд с встроенным PCK.
-- [x] GitHub Actions: headless-тесты.
+- [x] CI-рецепт headless-тестов (`.docs/ci/tests.yml`, включается с `workflow` scope).
 - [x] Тег `v0.1.0-vertical-slice`.
 - [x] GitHub Release с билдом и трейлером.
 - [ ] Steam-страница и Next Fest (v0.4).
