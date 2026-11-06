@@ -10,7 +10,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-6e7681)]()
 
-[**Скачать билд**](https://github.com/geekAmis/NEREID/releases/latest) · [**Трейлер (MP4)**](docs/media/nereid-trailer.mp4) · [**План разработки**](.docs/PLAN.md) · [**AI в игре**](.docs/AI_IN_GAME.md)
+[**Скачать билд**](https://github.com/geekAmis/NEREID/releases/latest) · [**Трейлер (MP4)**](docs/media/nereid-trailer.mp4) · [**Issues**](https://github.com/geekAmis/NEREID/issues) · [**План разработки**](.docs/PLAN.md) · [**AI в игре**](.docs/AI_IN_GAME.md)
 
 [![Трейлер NEREID](docs/media/nereid-trailer.gif)](docs/media/nereid-trailer.mp4)
 
