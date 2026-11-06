@@ -1,0 +1,60 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="NEREID"
+config/description="Клаустрофобный подводный immersive sim в одноместной капсуле. Слушай. Не шуми. Не отвечай."
+config/version="0.1.0"
+run/main_scene="res://scenes/Main.tscn"
+config/features=PackedStringArray("4.7", "Forward Plus")
+boot_splash/bg_color=Color(0.008, 0.016, 0.02, 1)
+boot_splash/show_image=false
+config/icon="res://icon.svg"
+
+[autoload]
+
+Save="*res://scripts/core/save_system.gd"
+Synth="*res://scripts/audio/synth.gd"
+Loc="*res://scripts/core/locale.gd"
+Game="*res://scripts/core/game.gd"
+
+[debug]
+
+gdscript/warnings/unsafe_property_access=1
+gdscript/warnings/unsafe_method_access=1
+gdscript/warnings/unsafe_cast=1
+gdscript/warnings/unsafe_call_argument=1
+gdscript/warnings/return_value_discarded=1
+gdscript/warnings/inference_on_variant=1
+
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+window/size/window_width_override=1600
+window/size/window_height_override=900
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[layer_names]
+
+3d_physics/layer_1="World"
+3d_physics/layer_2="Anomaly"
+3d_physics/layer_3="Interactable"
+3d_physics/layer_4="Glass"
+
+[rendering]
+
+renderer/rendering_method.mobile="gl_compatibility"
+global_illumination/gi/use_half_resolution=true
+anti_aliasing/quality/msaa_3d=1
+environment/defaults/default_clear_color=Color(0.008, 0.016, 0.02, 1)
+anti_aliasing/quality/screen_space_aa=1
