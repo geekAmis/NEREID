@@ -1,0 +1,1026 @@
+{
+  "project": "NEREID / Нереида: последний сеанс",
+  "version": "0.1.0",
+  "updated": "2026-11-06",
+  "engine": "Godot 4.7.2",
+  "legend": {
+    "status": [
+      "todo",
+      "in_progress",
+      "done",
+      "blocked"
+    ],
+    "priority": [
+      "P0",
+      "P1",
+      "P2"
+    ]
+  },
+  "phases": [
+    {
+      "id": "P0",
+      "title": "Пре-продакшн и документация",
+      "goal": "Зафиксировать видение, риски, планировку и производственный план.",
+      "tasks": [
+        {
+          "id": "NER-001",
+          "title": "Написать PLAN.md: механики, нарратив, арт, бюджет",
+          "status": "done",
+          "priority": "P0",
+          "area": "docs",
+          "estimate_days": 1,
+          "deps": [],
+          "acceptance": "Документ содержит паспорт, столпы, цикл, акты, системы, риски, дорожную карту."
+        },
+        {
+          "id": "NER-002",
+          "title": "Написать AI_IN_GAME.md: режиссёр, Слушатель, k-NN, LLM",
+          "status": "done",
+          "priority": "P0",
+          "area": "docs",
+          "estimate_days": 1,
+          "deps": [
+            "NER-001"
+          ],
+          "acceptance": "Описаны модель, формулы, данные, ограничения и тесты."
+        },
+        {
+          "id": "NER-003",
+          "title": "Написать PLANNING_ROOM.md: план кабины, координаты, свет",
+          "status": "done",
+          "priority": "P0",
+          "area": "docs",
+          "estimate_days": 1,
+          "deps": [
+            "NER-001"
+          ],
+          "acceptance": "Есть вид сверху, разрез, таблицы координат, материалов, бюджета."
+        },
+        {
+          "id": "NER-004",
+          "title": "Собрать 7 рецензий специалистов",
+          "status": "done",
+          "priority": "P0",
+          "area": "docs",
+          "estimate_days": 1,
+          "deps": [
+            "NER-001",
+            "NER-002",
+            "NER-003"
+          ],
+          "acceptance": "Все 7 файлов в .docs, с оценками и конкретными правками."
+        },
+        {
+          "id": "NER-005",
+          "title": "Написать README: запуск, архитектура, план, графика",
+          "status": "done",
+          "priority": "P0",
+          "area": "docs",
+          "estimate_days": 1,
+          "deps": [
+            "NER-001"
+          ],
+          "acceptance": "Новичок может запустить проект и понять структуру."
+        },
+        {
+          "id": "NER-006",
+          "title": "Создать TODO.JSON и ISSUES.md",
+          "status": "done",
+          "priority": "P0",
+          "area": "docs",
+          "estimate_days": 0.5,
+          "deps": [
+            "NER-001"
+          ],
+          "acceptance": "Задачи с ID, зависимостями, критериями; issue-трекер ведётся."
+        },
+        {
+          "id": "NER-007",
+          "title": "Инициализировать git, ветки, .gitignore, .gitattributes",
+          "status": "done",
+          "priority": "P0",
+          "area": "infra",
+          "estimate_days": 0.5,
+          "deps": [],
+          "acceptance": "main/develop/feature-ветки, первый коммит, тег."
+        },
+        {
+          "id": "NER-008",
+          "title": "Проверить товарный знак NEREID и домены",
+          "status": "todo",
+          "priority": "P1",
+          "area": "legal",
+          "estimate_days": 0.5,
+          "deps": [
+            "NER-005"
+          ],
+          "acceptance": "Отчёт по классам 9/41, рекомендация по имени."
+        },
+        {
+          "id": "NER-009",
+          "title": "Собрать референс-борд и палитру",
+          "status": "todo",
+          "priority": "P1",
+          "area": "art",
+          "estimate_days": 1,
+          "deps": [
+            "NER-003"
+          ],
+          "acceptance": "20 изображений, палитра, 3 варианта капсулы."
+        }
+      ]
+    },
+    {
+      "id": "P1",
+      "title": "Каркас проекта",
+      "goal": "Рабочий Godot-проект с меню, игрой, настройками и тестами.",
+      "tasks": [
+        {
+          "id": "NER-010",
+          "title": "Создать project.godot, слои, ввод, рендер",
+          "status": "done",
+          "priority": "P0",
+          "area": "infra",
+          "estimate_days": 0.5,
+          "deps": [
+            "NER-007"
+          ],
+          "acceptance": "Проект открывается в Godot 4.7.2 без ошибок."
+        },
+        {
+          "id": "NER-011",
+          "title": "Автолоады: Game, Synth, Save, Loc",
+          "status": "done",
+          "priority": "P0",
+          "area": "core",
+          "estimate_days": 1,
+          "deps": [
+            "NER-010"
+          ],
+          "acceptance": "Настройки сохраняются, сцены переключаются, строки локализованы."
+        },
+        {
+          "id": "NER-012",
+          "title": "Main.tscn: меню ↔ игра",
+          "status": "done",
+          "priority": "P0",
+          "area": "ui",
+          "estimate_days": 1,
+          "deps": [
+            "NER-011"
+          ],
+          "acceptance": "Запуск, старт, пауза, выход, возврат в меню."
+        },
+        {
+          "id": "NER-013",
+          "title": "Настройки: громкость, мышь, FOV, качество, доступность",
+          "status": "done",
+          "priority": "P1",
+          "area": "ui",
+          "estimate_days": 1.5,
+          "deps": [
+            "NER-011"
+          ],
+          "acceptance": "Настройки сохраняются в user://settings.json."
+        },
+        {
+          "id": "NER-014",
+          "title": "Headless-раннер тестов",
+          "status": "done",
+          "priority": "P0",
+          "area": "tests",
+          "estimate_days": 1,
+          "deps": [
+            "NER-010"
+          ],
+          "acceptance": "`--script res://tests/run_tests.gd` возвращает 0/1 и печатает отчёт."
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "title": "Кабина",
+      "goal": "Процедурная кабина, материалы, свет, игрок.",
+      "tasks": [
+        {
+          "id": "NER-020",
+          "title": "Сфера с вырезом под иллюминатор",
+          "status": "done",
+          "priority": "P0",
+          "area": "cabin",
+          "estimate_days": 2,
+          "deps": [
+            "NER-010"
+          ],
+          "acceptance": "Нормали внутрь, край выреза заварен, нет дыр."
+        },
+        {
+          "id": "NER-021",
+          "title": "PBR-материалы: 6 наборов CC0",
+          "status": "done",
+          "priority": "P0",
+          "area": "art",
+          "estimate_days": 1,
+          "deps": [
+            "NER-020"
+          ],
+          "acceptance": "Текстуры импортированы, трипланар, корректные normal/roughness."
+        },
+        {
+          "id": "NER-022",
+          "title": "Настил, рёбра, болты, трубы, кабели",
+          "status": "done",
+          "priority": "P1",
+          "area": "cabin",
+          "estimate_days": 2,
+          "deps": [
+            "NER-020"
+          ],
+          "acceptance": "Кабина читается как металлическая, есть передний/средний/дальний план."
+        },
+        {
+          "id": "NER-023",
+          "title": "Иллюминатор: стекло, конденсат, протирание",
+          "status": "done",
+          "priority": "P0",
+          "area": "cabin",
+          "estimate_days": 2,
+          "deps": [
+            "NER-020"
+          ],
+          "acceptance": "Видно воду, капли, маска протирания, преломление."
+        },
+        {
+          "id": "NER-024",
+          "title": "Свет: лампа, CRT, аварийный, холодный, фонарь",
+          "status": "done",
+          "priority": "P0",
+          "area": "art",
+          "estimate_days": 1.5,
+          "deps": [
+            "NER-020"
+          ],
+          "acceptance": "Тёплый/холодный баланс, мерцание, 3 тени, 60 fps."
+        },
+        {
+          "id": "NER-025",
+          "title": "Этикетки и трафареты на русском",
+          "status": "done",
+          "priority": "P1",
+          "area": "art",
+          "estimate_days": 1,
+          "deps": [
+            "NER-021"
+          ],
+          "acceptance": "40 подписей, читаемы с 1,5 м, без ошибок."
+        },
+        {
+          "id": "NER-026",
+          "title": "Коллизии: сфера-ограничитель, пульт, кресло",
+          "status": "done",
+          "priority": "P0",
+          "area": "cabin",
+          "estimate_days": 1,
+          "deps": [
+            "NER-020"
+          ],
+          "acceptance": "Нельзя выйти из кабины, пройти сквозь пульт."
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "title": "Симуляция",
+      "goal": "CapsuleSim и все ресурсы, связанные с приборами.",
+      "tasks": [
+        {
+          "id": "NER-030",
+          "title": "CapsuleSim: каркас, тик 10 Гц, сигналы",
+          "status": "done",
+          "priority": "P0",
+          "area": "sim",
+          "estimate_days": 2,
+          "deps": [
+            "NER-010"
+          ],
+          "acceptance": "10 000 тиков без ошибок, состояние сериализуется."
+        },
+        {
+          "id": "NER-031",
+          "title": "Жизнеобеспечение: O₂, CO₂, скруббер",
+          "status": "done",
+          "priority": "P0",
+          "area": "sim",
+          "estimate_days": 2,
+          "deps": [
+            "NER-030"
+          ],
+          "acceptance": "CO₂ растёт, патрон снижает, пороги дают эффекты."
+        },
+        {
+          "id": "NER-032",
+          "title": "Энергия: АКБ, цепи, генератор, отказы",
+          "status": "done",
+          "priority": "P0",
+          "area": "sim",
+          "estimate_days": 2,
+          "deps": [
+            "NER-030"
+          ],
+          "acceptance": "Нагрузка складывается, 0 % гасит цепи, генератор заряжает."
+        },
+        {
+          "id": "NER-033",
+          "title": "Вода и корпус: приток, помпа, латка",
+          "status": "done",
+          "priority": "P0",
+          "area": "sim",
+          "estimate_days": 2,
+          "deps": [
+            "NER-030"
+          ],
+          "acceptance": "Вода растёт, помпа откачивает, латка снижает приток."
+        },
+        {
+          "id": "NER-034",
+          "title": "Глубина, лебёдка, трос",
+          "status": "done",
+          "priority": "P0",
+          "area": "sim",
+          "estimate_days": 2,
+          "deps": [
+            "NER-030"
+          ],
+          "acceptance": "Глубина следует за целью, трос реагирует, обрыв — финал."
+        },
+        {
+          "id": "NER-035",
+          "title": "Температура, конденсат, руки",
+          "status": "done",
+          "priority": "P1",
+          "area": "sim",
+          "estimate_days": 1.5,
+          "deps": [
+            "NER-030"
+          ],
+          "acceptance": "Температура падает без обогрева, влияет на скорость."
+        },
+        {
+          "id": "NER-036",
+          "title": "Шум и стресс",
+          "status": "done",
+          "priority": "P0",
+          "area": "sim",
+          "estimate_days": 1.5,
+          "deps": [
+            "NER-030"
+          ],
+          "acceptance": "Событие шума повышает уровень, стресс влияет на камеру/скорость."
+        },
+        {
+          "id": "NER-037",
+          "title": "Пять шкал и цифровые индикаторы",
+          "status": "done",
+          "priority": "P0",
+          "area": "ui",
+          "estimate_days": 2,
+          "deps": [
+            "NER-030"
+          ],
+          "acceptance": "Стрелки плавно следуют за симуляцией, подписи читаемы."
+        },
+        {
+          "id": "NER-038",
+          "title": "Балансировка 20-минутной сессии",
+          "status": "done",
+          "priority": "P0",
+          "area": "sim",
+          "estimate_days": 2,
+          "deps": [
+            "NER-031",
+            "NER-032",
+            "NER-033",
+            "NER-034"
+          ],
+          "acceptance": "Игрок не умирает в первые 6 минут, ресурсы успевают."
+        }
+      ]
+    },
+    {
+      "id": "P4",
+      "title": "Взаимодействие и устройства",
+      "goal": "24 устройства с анимацией, звуком и связью с симуляцией.",
+      "tasks": [
+        {
+          "id": "NER-040",
+          "title": "Interactable: фокус, подсказка, use/scroll/alt",
+          "status": "done",
+          "priority": "P0",
+          "area": "cabin",
+          "estimate_days": 1,
+          "deps": [
+            "NER-026"
+          ],
+          "acceptance": "Луч подсвечивает, подпись появляется, звук клика."
+        },
+        {
+          "id": "NER-041",
+          "title": "ToggleSwitch, Button, Knob, Valve, Crank",
+          "status": "done",
+          "priority": "P0",
+          "area": "cabin",
+          "estimate_days": 3,
+          "deps": [
+            "NER-040"
+          ],
+          "acceptance": "Все анимированы, шумят, меняют состояние."
+        },
+        {
+          "id": "NER-042",
+          "title": "Щиток питания: 6 цепей",
+          "status": "done",
+          "priority": "P0",
+          "area": "cabin",
+          "estimate_days": 1,
+          "deps": [
+            "NER-041",
+            "NER-032"
+          ],
+          "acceptance": "Тумблеры включают/выключают нагрузку."
+        },
+        {
+          "id": "NER-043",
+          "title": "Скруббер: замена патрона",
+          "status": "done",
+          "priority": "P0",
+          "area": "cabin",
+          "estimate_days": 1.5,
+          "deps": [
+            "NER-041",
+            "NER-031"
+          ],
+          "acceptance": "Удержание 25 с, звук, патрон меняется, CO₂ падает."
+        },
+        {
+          "id": "NER-044",
+          "title": "Лебёдка и глубина",
+          "status": "done",
+          "priority": "P0",
+          "area": "cabin",
+          "estimate_days": 1.5,
+          "deps": [
+            "NER-041",
+            "NER-034"
+          ],
+          "acceptance": "Крутить, шум, глубина меняется, трос натягивается."
+        },
+        {
+          "id": "NER-045",
+          "title": "Помпа и латка",
+          "status": "done",
+          "priority": "P0",
+          "area": "cabin",
+          "estimate_days": 1,
+          "deps": [
+            "NER-041",
+            "NER-033"
+          ],
+          "acceptance": "Помпа шумит и откачивает, латка снижает приток."
+        },
+        {
+          "id": "NER-046",
+          "title": "Рация, магнитофон, блокнот, доска фото",
+          "status": "done",
+          "priority": "P1",
+          "area": "cabin",
+          "estimate_days": 2,
+          "deps": [
+            "NER-041"
+          ],
+          "acceptance": "Рация ловит 3 канала, ленты играют, блокнот листается."
+        },
+        {
+          "id": "NER-047",
+          "title": "24-е устройство: секретный тумблер «47 Гц»",
+          "status": "done",
+          "priority": "P1",
+          "area": "cabin",
+          "estimate_days": 0.5,
+          "deps": [
+            "NER-041"
+          ],
+          "acceptance": "Открывает финал «Ответ» при условиях."
+        }
+      ]
+    },
+    {
+      "id": "P5",
+      "title": "Слух, CRT и каталог",
+      "goal": "Полный цикл «слушать → определить → записать».",
+      "tasks": [
+        {
+          "id": "NER-050",
+          "title": "AudioSynth: 30+ процедурных клипов",
+          "status": "done",
+          "priority": "P0",
+          "area": "audio",
+          "estimate_days": 3,
+          "deps": [
+            "NER-010"
+          ],
+          "acceptance": "Гул, помпа, капли, скрип, колокол, пинг, хор, статика."
+        },
+        {
+          "id": "NER-051",
+          "title": "Гидрофон: gain, filter, channel, ping",
+          "status": "done",
+          "priority": "P0",
+          "area": "audio",
+          "estimate_days": 2,
+          "deps": [
+            "NER-050",
+            "NER-041"
+          ],
+          "acceptance": "Звук меняется, пинг даёт эхо, шум растёт."
+        },
+        {
+          "id": "NER-052",
+          "title": "CRT: волна и водопад",
+          "status": "done",
+          "priority": "P0",
+          "area": "ui",
+          "estimate_days": 2,
+          "deps": [
+            "NER-051"
+          ],
+          "acceptance": "Реальный DFT, 96 колонок, свечение, развёртка."
+        },
+        {
+          "id": "NER-053",
+          "title": "Каталог 10 сигналов и журнал",
+          "status": "done",
+          "priority": "P0",
+          "area": "sim",
+          "estimate_days": 2,
+          "deps": [
+            "NER-051"
+          ],
+          "acceptance": "Игрок выбирает подпись, правильная запись закрывает задачу."
+        },
+        {
+          "id": "NER-054",
+          "title": "k-NN-классификатор (v1.1)",
+          "status": "todo",
+          "priority": "P1",
+          "area": "ai",
+          "estimate_days": 2,
+          "deps": [
+            "NER-053"
+          ],
+          "acceptance": "10 классов, точность ≥85 %, 2 гипотезы, офлайн."
+        },
+        {
+          "id": "NER-055",
+          "title": "Запись на бобины и переслушивание",
+          "status": "todo",
+          "priority": "P2",
+          "area": "audio",
+          "estimate_days": 2,
+          "deps": [
+            "NER-051"
+          ],
+          "acceptance": "3 бобины, 30 с, фильтры, расходник."
+        }
+      ]
+    },
+    {
+      "id": "P6",
+      "title": "Фотография",
+      "goal": "12 кадров, вспышка, слой аномалий, проявка, доска.",
+      "tasks": [
+        {
+          "id": "NER-060",
+          "title": "Фотоаппарат: зум, вспышка, перезарядка",
+          "status": "done",
+          "priority": "P0",
+          "area": "fx",
+          "estimate_days": 1.5,
+          "deps": [
+            "NER-040"
+          ],
+          "acceptance": "Режим камеры, 1×/2×, 12 кадров, вспышка +6 дБ."
+        },
+        {
+          "id": "NER-061",
+          "title": "Захват viewport в PNG",
+          "status": "done",
+          "priority": "P0",
+          "area": "fx",
+          "estimate_days": 1,
+          "deps": [
+            "NER-060"
+          ],
+          "acceptance": "Снимок без HUD, сохраняется в user://photos."
+        },
+        {
+          "id": "NER-062",
+          "title": "Слой аномалий, видимый только на вспышке",
+          "status": "done",
+          "priority": "P0",
+          "area": "fx",
+          "estimate_days": 1.5,
+          "deps": [
+            "NER-061"
+          ],
+          "acceptance": "В обычном свете объекта нет, на фото есть."
+        },
+        {
+          "id": "NER-063",
+          "title": "Проявка 20 с и доска фото",
+          "status": "done",
+          "priority": "P0",
+          "area": "ui",
+          "estimate_days": 1.5,
+          "deps": [
+            "NER-061"
+          ],
+          "acceptance": "Фото проявляется, крепится, можно рассматривать."
+        },
+        {
+          "id": "NER-064",
+          "title": "Проверка целей фото и задачи",
+          "status": "done",
+          "priority": "P1",
+          "area": "sim",
+          "estimate_days": 1,
+          "deps": [
+            "NER-062"
+          ],
+          "acceptance": "Правильный кадр закрывает задачу, неправильный — нет."
+        }
+      ]
+    },
+    {
+      "id": "P7",
+      "title": "AI и режиссура",
+      "goal": "Темп, Слушатель, процедурные реплики.",
+      "tasks": [
+        {
+          "id": "NER-070",
+          "title": "Silence Director: tension, cooldown, акты",
+          "status": "done",
+          "priority": "P0",
+          "area": "ai",
+          "estimate_days": 3,
+          "deps": [
+            "NER-036"
+          ],
+          "acceptance": "10 000 тиков, нет смерти в первые 6 минут, колокол гарантирован."
+        },
+        {
+          "id": "NER-071",
+          "title": "Listener: FSM, граф, внимание",
+          "status": "done",
+          "priority": "P0",
+          "area": "ai",
+          "estimate_days": 3,
+          "deps": [
+            "NER-036"
+          ],
+          "acceptance": "Тишина снижает внимание, пинг привлекает, удар не убивает."
+        },
+        {
+          "id": "NER-072",
+          "title": "Процедурные реплики Веры",
+          "status": "done",
+          "priority": "P1",
+          "area": "narrative",
+          "estimate_days": 2,
+          "deps": [
+            "NER-070"
+          ],
+          "acceptance": "20 шаблонов, без повторов, уместны состоянию."
+        },
+        {
+          "id": "NER-073",
+          "title": "Player model: careful/noisy/fast/risk",
+          "status": "todo",
+          "priority": "P2",
+          "area": "ai",
+          "estimate_days": 1,
+          "deps": [
+            "NER-070"
+          ],
+          "acceptance": "Стиль влияет на реплики и события, не на сложность скрыто."
+        },
+        {
+          "id": "NER-074",
+          "title": "Опциональный LLM-радио (Ollama)",
+          "status": "todo",
+          "priority": "P2",
+          "area": "ai",
+          "estimate_days": 2,
+          "deps": [
+            "NER-072"
+          ],
+          "acceptance": "Выключено по умолчанию, таймаут, fallback, без сети."
+        }
+      ]
+    },
+    {
+      "id": "P8",
+      "title": "Нарратив и акты",
+      "goal": "20-минутный срез с 3 актами и 2 финалами.",
+      "tasks": [
+        {
+          "id": "NER-080",
+          "title": "Бит-лист в data/story.json",
+          "status": "done",
+          "priority": "P0",
+          "area": "narrative",
+          "estimate_days": 1,
+          "deps": [
+            "NER-001"
+          ],
+          "acceptance": "22 минуты, 24 события, 4 акта."
+        },
+        {
+          "id": "NER-081",
+          "title": "Задачи: 6+1, условия закрытия",
+          "status": "done",
+          "priority": "P0",
+          "area": "narrative",
+          "estimate_days": 1,
+          "deps": [
+            "NER-080"
+          ],
+          "acceptance": "Задачи закрываются действием, блокнот обновляется."
+        },
+        {
+          "id": "NER-082",
+          "title": "Реплики Веры: 32, SAPI + субтитры",
+          "status": "done",
+          "priority": "P0",
+          "area": "audio",
+          "estimate_days": 2,
+          "deps": [
+            "NER-080"
+          ],
+          "acceptance": "WAV сгенерированы, фильтр рации, субтитры."
+        },
+        {
+          "id": "NER-083",
+          "title": "Ленты Гринберга: 4 обязательных",
+          "status": "done",
+          "priority": "P1",
+          "area": "narrative",
+          "estimate_days": 1.5,
+          "deps": [
+            "NER-080"
+          ],
+          "acceptance": "4 ленты озвучены, ключевая фраза в блокноте."
+        },
+        {
+          "id": "NER-084",
+          "title": "Финал «Всплытие»",
+          "status": "done",
+          "priority": "P0",
+          "area": "narrative",
+          "estimate_days": 1,
+          "deps": [
+            "NER-081"
+          ],
+          "acceptance": "Рычаг, кат, титры, фото остаётся."
+        },
+        {
+          "id": "NER-085",
+          "title": "Финал «Ответ»",
+          "status": "done",
+          "priority": "P0",
+          "area": "narrative",
+          "estimate_days": 1.5,
+          "deps": [
+            "NER-081",
+            "NER-047"
+          ],
+          "acceptance": "Условия, настройка 47 Гц, «Я здесь», хор, титры."
+        },
+        {
+          "id": "NER-086",
+          "title": "Финалы «Тишина» и «Хранитель» (после демо)",
+          "status": "todo",
+          "priority": "P2",
+          "area": "narrative",
+          "estimate_days": 2,
+          "deps": [
+            "NER-085"
+          ],
+          "acceptance": "Активные выборы, уникальные сцены, 4/4."
+        }
+      ]
+    },
+    {
+      "id": "P9",
+      "title": "UI/UX и доступность",
+      "goal": "Меню, HUD, субтитры, настройки, пауза.",
+      "tasks": [
+        {
+          "id": "NER-090",
+          "title": "Главное меню на фоне живой кабины",
+          "status": "done",
+          "priority": "P1",
+          "area": "ui",
+          "estimate_days": 2,
+          "deps": [
+            "NER-020",
+            "NER-012"
+          ],
+          "acceptance": "Медленный проезд камеры, заголовок, 4 кнопки."
+        },
+        {
+          "id": "NER-091",
+          "title": "HUD: точка, подсказка, субтитры, тост",
+          "status": "done",
+          "priority": "P0",
+          "area": "ui",
+          "estimate_days": 2,
+          "deps": [
+            "NER-040"
+          ],
+          "acceptance": "Минимализм, скрытие по H, читаемость."
+        },
+        {
+          "id": "NER-092",
+          "title": "Пауза и настройки",
+          "status": "done",
+          "priority": "P0",
+          "area": "ui",
+          "estimate_days": 2,
+          "deps": [
+            "NER-013"
+          ],
+          "acceptance": "Esc, 4 вкладки, сохранение, возврат."
+        },
+        {
+          "id": "NER-093",
+          "title": "Субтитры и доступность",
+          "status": "done",
+          "priority": "P1",
+          "area": "ui",
+          "estimate_days": 1.5,
+          "deps": [
+            "NER-091"
+          ],
+          "acceptance": "Размер, фон, отключение зерна/тряски, предупреждение."
+        },
+        {
+          "id": "NER-094",
+          "title": "Локализация RU/EN (строки)",
+          "status": "done",
+          "priority": "P2",
+          "area": "ui",
+          "estimate_days": 2,
+          "deps": [
+            "NER-011"
+          ],
+          "acceptance": "Все строки в JSON, переключение, английские субтитры."
+        }
+      ]
+    },
+    {
+      "id": "P10",
+      "title": "Полировка и релиз",
+      "goal": "Графика, звук, производительность, сборка, маркетинг.",
+      "tasks": [
+        {
+          "id": "NER-100",
+          "title": "Постобработка: зерно, виньетка, аберрация, бочка",
+          "status": "done",
+          "priority": "P0",
+          "area": "fx",
+          "estimate_days": 2,
+          "deps": [
+            "NER-024"
+          ],
+          "acceptance": "Один full-screen pass, настройки, фотосенситивность."
+        },
+        {
+          "id": "NER-101",
+          "title": "Шейдеры: стекло, вода, CRT, фото",
+          "status": "done",
+          "priority": "P0",
+          "area": "fx",
+          "estimate_days": 3,
+          "deps": [
+            "NER-023"
+          ],
+          "acceptance": "Компилируются, без артефактов, 60 fps."
+        },
+        {
+          "id": "NER-102",
+          "title": "Сейв/лоад и автосейв",
+          "status": "done",
+          "priority": "P1",
+          "area": "core",
+          "estimate_days": 2,
+          "deps": [
+            "NER-030"
+          ],
+          "acceptance": "JSON, версия, миграция, 1 слот."
+        },
+        {
+          "id": "NER-103",
+          "title": "Профилирование и quality presets",
+          "status": "in_progress",
+          "priority": "P0",
+          "area": "perf",
+          "estimate_days": 2,
+          "deps": [
+            "NER-100",
+            "NER-101"
+          ],
+          "acceptance": "60 fps на GTX 1060, 3 пресета."
+        },
+        {
+          "id": "NER-104",
+          "title": "Финальные headless-тесты",
+          "status": "done",
+          "priority": "P0",
+          "area": "tests",
+          "estimate_days": 2,
+          "deps": [
+            "NER-038"
+          ],
+          "acceptance": "Все инварианты, 0 ошибок, CI-ready."
+        },
+        {
+          "id": "NER-105",
+          "title": "Сборка билда (экспорт/раннер)",
+          "status": "done",
+          "priority": "P1",
+          "area": "infra",
+          "estimate_days": 1,
+          "deps": [
+            "NER-103"
+          ],
+          "acceptance": "Запускается на чистой машине, без редактора."
+        },
+        {
+          "id": "NER-106",
+          "title": "GitHub Release, скриншоты, трейлер",
+          "status": "done",
+          "priority": "P1",
+          "area": "marketing",
+          "estimate_days": 5,
+          "deps": [
+            "NER-009"
+          ],
+          "acceptance": "Опубликован тег v0.1.0, билд, 6 скриншотов и 19-секундный трейлер."
+        },
+        {
+          "id": "NER-107",
+          "title": "Демо 20–25 минут и Next Fest",
+          "status": "todo",
+          "priority": "P1",
+          "area": "release",
+          "estimate_days": 5,
+          "deps": [
+            "NER-105"
+          ],
+          "acceptance": "Демо играется, 70 % доходят до финала."
+        },
+        {
+          "id": "NER-108",
+          "title": "Профессиональная актриса на Веру",
+          "status": "todo",
+          "priority": "P2",
+          "area": "audio",
+          "estimate_days": 2,
+          "deps": [
+            "NER-082"
+          ],
+          "acceptance": "28 реплик, 48 кГц, радио-обработка."
+        },
+        {
+          "id": "NER-109",
+          "title": "CI: headless-тесты в GitHub Actions",
+          "status": "done",
+          "priority": "P1",
+          "area": "infra",
+          "estimate_days": 1,
+          "deps": [
+            "NER-104"
+          ],
+          "acceptance": "Workflow tests.yml импортирует проект и прогоняет 101 проверку на Ubuntu."
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tasks": 76,
+    "done": 66,
+    "in_progress": 1,
+    "todo": 9,
+    "blocked": 0
+  }
+}

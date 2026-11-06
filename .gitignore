@@ -1,0 +1,51 @@
+# Godot 4+
+.godot/
+game/.godot/
+*.translation
+
+# Builds
+build/
+*.exe
+*.pck
+*.zip
+*.7z
+*.tar.gz
+export_presets.cfg.bak
+
+# Raw downloaded assets (source textures are in game/assets)
+_assets_raw/
+assets_raw/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs / temp
+*.log
+*.tmp
+*.bak
+parse_*.log
+user_screenshots/
+_shots/
+_frames/
+основа.txt
+
+# Godot user data (if someone points user:// here)
+user/
+%APPDATA%/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local secrets
+.env
+*.token
+secrets.json
